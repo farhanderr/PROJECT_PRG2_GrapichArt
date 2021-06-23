@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{781F851F-DF99-476E-B56C-69385CDA16C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PROJECT_PRG2_GrapichArt</RootNamespace>
+    <AssemblyName>PROJECT_PRG2_GrapichArt</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox">
+      <HintPath>..\..\..\..\Downloads\JTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Db_GrapichArtDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Db_GrapichArtDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminBrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminBrg.Designer.cs">
+      <DependentUpon>FormAdminBrg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKasir.Designer.cs">
+      <DependentUpon>FormKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager.Designer.cs">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KelolaBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KelolaBarang.Designer.cs">
+      <DependentUpon>KelolaBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KelolaJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KelolaJabatan.Designer.cs">
+      <DependentUpon>KelolaJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KelolaMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KelolaMember.Designer.cs">
+      <DependentUpon>KelolaMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TambahBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahBarang.Designer.cs">
+      <DependentUpon>TambahBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TambahJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahJabatan.Designer.cs">
+      <DependentUpon>TambahJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TambahJenisMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahJenisMember.Designer.cs">
+      <DependentUpon>TambahJenisMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TambahMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahMember.Designer.cs">
+      <DependentUpon>TambahMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TambahPaket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahPaket.Designer.cs">
+      <DependentUpon>TambahPaket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TambahSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahSupplier.Designer.cs">
+      <DependentUpon>TambahSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TambahTunjungan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahTunjungan.Designer.cs">
+      <DependentUpon>TambahTunjungan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kelola_Gaji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kelola_Gaji.Designer.cs">
+      <DependentUpon>Kelola_Gaji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kelola_KatMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kelola_KatMember.Designer.cs">
+      <DependentUpon>Kelola_KatMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kelola_paket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kelola_paket.Designer.cs">
+      <DependentUpon>Kelola_paket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kelola_Pegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kelola_Pegawai.Designer.cs">
+      <DependentUpon>Kelola_Pegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kelola_Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kelola_Supplier.Designer.cs">
+      <DependentUpon>Kelola_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_pembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_pembelian.Designer.cs">
+      <DependentUpon>Laporan_pembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_Penjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_Penjualan.Designer.cs">
+      <DependentUpon>Laporan_Penjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TambahKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahKaryawan.Designer.cs">
+      <DependentUpon>TambahKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UbahBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UbahBarang.Designer.cs">
+      <DependentUpon>UbahBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UbahJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UbahJabatan.Designer.cs">
+      <DependentUpon>UbahJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UbahJenisMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UbahJenisMember.Designer.cs">
+      <DependentUpon>UbahJenisMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UbahKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UbahKaryawan.Designer.cs">
+      <DependentUpon>UbahKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UbahMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UbahMember.Designer.cs">
+      <DependentUpon>UbahMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UbahPaket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UbahPaket.Designer.cs">
+      <DependentUpon>UbahPaket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UbahSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UbahSupplier.Designer.cs">
+      <DependentUpon>UbahSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UbahTunjangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UbahTunjangan.Designer.cs">
+      <DependentUpon>UbahTunjangan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminBrg.resx">
+      <DependentUpon>FormAdminBrg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKasir.resx">
+      <DependentUpon>FormKasir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KelolaBarang.resx">
+      <DependentUpon>KelolaBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KelolaJabatan.resx">
+      <DependentUpon>KelolaJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KelolaMember.resx">
+      <DependentUpon>KelolaMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahBarang.resx">
+      <DependentUpon>TambahBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahJabatan.resx">
+      <DependentUpon>TambahJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahJenisMember.resx">
+      <DependentUpon>TambahJenisMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahMember.resx">
+      <DependentUpon>TambahMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahPaket.resx">
+      <DependentUpon>TambahPaket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahSupplier.resx">
+      <DependentUpon>TambahSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahTunjungan.resx">
+      <DependentUpon>TambahTunjungan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kelola_Gaji.resx">
+      <DependentUpon>Kelola_Gaji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kelola_KatMember.resx">
+      <DependentUpon>Kelola_KatMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kelola_paket.resx">
+      <DependentUpon>Kelola_paket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kelola_Pegawai.resx">
+      <DependentUpon>Kelola_Pegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kelola_Supplier.resx">
+      <DependentUpon>Kelola_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_pembelian.resx">
+      <DependentUpon>Laporan_pembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Penjualan.resx">
+      <DependentUpon>Laporan_Penjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TambahKaryawan.resx">
+      <DependentUpon>TambahKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UbahBarang.resx">
+      <DependentUpon>UbahBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UbahJabatan.resx">
+      <DependentUpon>UbahJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UbahJenisMember.resx">
+      <DependentUpon>UbahJenisMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UbahKaryawan.resx">
+      <DependentUpon>UbahKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UbahMember.resx">
+      <DependentUpon>UbahMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UbahPaket.resx">
+      <DependentUpon>UbahPaket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UbahSupplier.resx">
+      <DependentUpon>UbahSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UbahTunjangan.resx">
+      <DependentUpon>UbahTunjangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Db_GrapichArtDataSet.xsc">
+      <DependentUpon>Db_GrapichArtDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Db_GrapichArtDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Db_GrapichArtDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Db_GrapichArtDataSet.xss">
+      <DependentUpon>Db_GrapichArtDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo Project PRG2.png" />
+    <None Include="Resources\icons8_delete_26px.png" />
+    <None Include="Resources\icons8_search_32px.png" />
+    <None Include="Resources\icons8_cancel_26px.png" />
+    <None Include="Resources\icons8_save_30px.png" />
+    <None Include="Resources\icons8_update_24px.png" />
+    <None Include="Resources\icons8_add_30px.png" />
+    <None Include="Resources\Moad Series.jpg" />
+    <None Include="Resources\icons8_shutdown_64px.png" />
+    <None Include="Resources\icons8_women%27s_portal_32px.png" />
+    <None Include="Resources\icons8_buy_30px.png" />
+    <None Include="Resources\icons8_sell_30px.png" />
+    <None Include="Resources\icons8_forgot_password_24px.png" />
+    <None Include="Resources\icons8_login_24px.png" />
+    <None Include="Resources\icons8_supplier_30px.png" />
+    <None Include="Resources\icons8_management_30px.png" />
+    <None Include="Resources\icons8_user_groups_30px.png" />
+    <None Include="Resources\icons8_home_30px.png" />
+    <None Include="Resources\icons8_get_cash_50px.png" />
+    <None Include="Resources\icons8_user_50px.png" />
+    <None Include="Resources\icons8_home_32px.png" />
+    <None Include="Resources\jpenal.png" />
+    <None Include="Resources\download %281%29.jpg" />
+    <None Include="Resources\f10413-05l.png" />
+    <None Include="Resources\Flag_type_border.svg.png" />
+    <None Include="Resources\Logo Project PRG2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
