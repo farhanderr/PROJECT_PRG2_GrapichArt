@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Panel_form2 = new System.Windows.Forms.Panel();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLaporanPembelian = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDasboardManager = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLaporanPenjualan = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Panel_form2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,18 +47,10 @@
             this.panel1.Controls.Add(this.btnDasboardManager);
             this.panel1.Controls.Add(this.btnLaporanPenjualan);
             this.panel1.Location = new System.Drawing.Point(-4, 191);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(268, 366);
             this.panel1.TabIndex = 3;
-            // 
-            // Panel_form2
-            // 
-            this.Panel_form2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Panel_form2.Location = new System.Drawing.Point(264, -8);
-            this.Panel_form2.Name = "Panel_form2";
-            this.Panel_form2.Size = new System.Drawing.Size(842, 564);
-            this.Panel_form2.TabIndex = 4;
             // 
             // btnLogout
             // 
@@ -200,6 +192,14 @@
             this.btnLaporanPenjualan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporanPenjualan.Click += new System.EventHandler(this.btnLaporanPenjualan_Click);
             // 
+            // Panel_form2
+            // 
+            this.Panel_form2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Panel_form2.Location = new System.Drawing.Point(264, -8);
+            this.Panel_form2.Name = "Panel_form2";
+            this.Panel_form2.Size = new System.Drawing.Size(842, 564);
+            this.Panel_form2.TabIndex = 4;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.LightYellow;
@@ -213,6 +213,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormManager
             // 
@@ -223,7 +224,7 @@
             this.Controls.Add(this.Panel_form2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormManager";
             this.Text = "FormManager";
             this.Load += new System.EventHandler(this.FormManager_Load);

@@ -64,5 +64,10 @@ namespace PROJECT_PRG2_GrapichArt
             FormLogin a = new FormLogin();
             a.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
